@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<app-card v-for="book in books"></app-card>
+		<app-card v-for="book in books" :book="book"></app-card>
 	</div>
 </template>
 
