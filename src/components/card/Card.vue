@@ -1,5 +1,4 @@
 <template>
-	<div class="card-columns">
 		<!-- Bootstrap card styling -->
 		<div class="card" style="width: 18rem;">
 		  <img class="card-img-top" alt="Card image cap">
@@ -21,7 +20,6 @@
 				</div>
 		  </div>
 		</div>
-	</div>
 </template>
 
 <script>
@@ -35,7 +33,9 @@
 	}
 </script>
 <style>
-	.card-columns {
-		display: inline-block;
-	}
+
+div.card{
+	display: inline-block;
+	margin: 20px;
+}
 </style>
