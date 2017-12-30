@@ -5,7 +5,7 @@
 		    <option selected>Choose...</option>
 		    <option v-bind:value="{ option: Reading }">Reading</option>
 		    <option v-bind:value="{ option: HaveRead }">Have Read</option>
-		    <option v-bind:value="{ option: WantToRead }">Want to</option>
+		    <option v-bind:value="{ option: WantToRead }">Want to Read</option>
 		  </select>
 		</div>
 	</div>
