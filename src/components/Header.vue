@@ -30,3 +30,9 @@
 	</nav>
 	<!-- You need to handle dropdowns with javascript, and you could use Bootstrap js for that, but you want to handle all with vue. -->
 </template>
+
+<style>
+	nav.navbar.navbar-expand-lg.navbar-light.bg-light{
+
+	}
+</style>

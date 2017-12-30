@@ -1,6 +1,6 @@
 <template>
 	<div>
-	  <form class="center form-inline my-2 my-lg-0">
+	  <form class=" form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Enter book title, author, or ISBN" aria-label="Search" v-model="search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
@@ -39,12 +39,11 @@
 
 <style>
 	form.form-inline.my-2.my-lg-0 {
-	  padding: 30px !important;
-	}
-	.center {
-		margin: 0 auto !important;
-	}
+	  padding-top: 30px;
+	  padding-bottom: 30px;
+/*	  padding-left: 30px;
+*/	}
 	input.form-control.mr-sm-2 {
-		width: 600px !important;
-	}
+		width: 90% !important;
+	} 
 </style>

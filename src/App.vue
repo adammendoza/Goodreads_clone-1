@@ -21,7 +21,7 @@
 <style>
 
 body {
-  padding: 30px;
+  padding-top: 30px;
 }
 
 </style>
