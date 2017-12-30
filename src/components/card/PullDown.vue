@@ -1,11 +1,11 @@
 <template>
 	<div class="float-right">
 		<div class="input-group  dropdown">
-		  <select class="custom-select" id="inputGroupSelect04">
+		  <select v-model="selected" class="custom-select" id="inputGroupSelect04">
 		    <option selected>Choose...</option>
-		    <option value="1">Reading</option>
-		    <option value="2">Have read</option>
-		    <option value="3">Want to Read</option>
+		    <option v-bind:value="{ option: Reading }">Reading</option>
+		    <option v-bind:value="{ option: HaveRead }">Have Read</option>
+		    <option v-bind:value="{ option: WantToRead }">Want to</option>
 		  </select>
 		</div>
 	</div>
@@ -16,8 +16,13 @@
 	export default {
 		data(){
 			return {
-				isDropdownOpen: false
-			}
+				isDropdownOpen: false,
+				// select: [
+				// 	'Reading',
+				// 	'Have Read',
+				// 	'Want to Read'
+				// ]
+			} 
 		}
 	}
 </script>
