@@ -1,13 +1,14 @@
 <template>
 	<div class="float-right">
 		<div class="input-group  dropdown">
-		  <select v-model="selected" class="custom-select" id="inputGroupSelect04">
+		  <select v-model="value" class="custom-select" id="inputGroupSelect04" @change="addToList">
 		    <option selected>Choose...</option>
-		    <option v-bind:value="{ option: Reading }">Reading</option>
-		    <option v-bind:value="{ option: HaveRead }">Have Read</option>
-		    <option v-bind:value="{ option: WantToRead }">Want to Read</option>
+		    <option :value="{ 'option': 'reading' }">Reading</option>
+		    <option :value="{ 'option': 'haveRead' }">Have Read</option>
+		    <option :value="{ 'option': 'wantToRead' }">Want to Read</option>
 		  </select>
 		</div>
+		<p>value: {{ value.option }} </p>
 	</div>
 
 </template>
@@ -17,14 +18,19 @@
 		data(){
 			return {
 				isDropdownOpen: false,
-				// select: [
-				// 	'Reading',
-				// 	'Have Read',
-				// 	'Want to Read'
-				// ]
+				value: {},
+				reading: [],
+				haveRead: [],
+				wantToRead: []
 			} 
+		},
+		computed: {
+				addToList: function(){
+					console.log(this.value.option)
+					// if (this.value.option) 
+				}
+			}
 		}
-	}
 </script>
 <style>
 	.dropdown {
