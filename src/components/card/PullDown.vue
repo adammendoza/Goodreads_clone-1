@@ -9,12 +9,16 @@
 		  </select>
 		</div>
 		<p>value: {{ value.option }} </p>
+		<p>book title: {{ book.title}} </p>
+		<p>reading: {{ reading }} </p>
+		<p>read: {{ haveRead }} </p>
 	</div>
 
 </template>
 
 <script>
 	export default {
+		props: ['book'],
 		data(){
 			return {
 				isDropdownOpen: false,
@@ -24,10 +28,16 @@
 				wantToRead: []
 			} 
 		},
-		computed: {
+		methods: {
 				addToList: function(){
-					console.log(this.value.option)
-					// if (this.value.option) 
+					if (this.value.option == this.reading){
+						reading.push(this.book);
+						console.log(reading);
+					// } else if (this.value.option == haveRead){
+					// 	this.haveRead.push(this.book);
+					// } else {
+					// 	this.wantToRead.push(this.book);
+					} 
 				}
 			}
 		}

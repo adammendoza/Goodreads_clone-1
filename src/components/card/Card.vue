@@ -8,7 +8,7 @@
 		    <p>ISBN: {{ book.ISBN }}</p>
 		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 		    <!-- Dropdown on the right, stars on the left. -->
-		    <app-pull-down></app-pull-down>
+		    <app-pull-down :book="book"></app-pull-down>
 		  </div>
 		</div>
 </template>
