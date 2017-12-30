@@ -29,10 +29,14 @@
 			} 
 		},
 		methods: {
-				addToList: function(){
+				addToList: function(book){
 					if (this.value.option == this.reading){
-						reading.push(this.book);
-						console.log(reading);
+						this.reading.push({
+							title: book.title,
+							ISBN: book.ISBN,
+							author: book.author
+						});
+						console.log(this);
 					// } else if (this.value.option == haveRead){
 					// 	this.haveRead.push(this.book);
 					// } else {

@@ -1,10 +1,9 @@
 <template>
 	<div>
-	  <form class=" form-inline my-2 my-lg-0">
+		<form class=" form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Enter book title, author, or ISBN" aria-label="Search" v-model="search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
-	
 		<app-card v-for="book in filteredBooks" :book="book"></app-card>
 	</div>
 </template>
