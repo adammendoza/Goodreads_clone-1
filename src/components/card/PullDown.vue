@@ -12,6 +12,7 @@
 		<p>book title: {{ book.title}} </p>
 		<p>reading: {{ reading }} </p>
 		<p>read: {{ haveRead }} </p>
+		<p>want to read: {{ wantToRead }} </p>
 	</div>
 
 </template>
@@ -29,19 +30,19 @@
 			} 
 		},
 		methods: {
-				addToList: function(book){
-					if (this.value.option === reading){
-						this.reading.push({
-							title: this.book.title,
-							ISBN: this.book.ISBN,
-							author: this.book.author
-						});
-						console.log(this);
-					// } else if (this.value.option == haveRead){
-					// 	this.haveRead.push(this.book);
-					// } else {
-					// 	this.wantToRead.push(this.book);
-					} 
+				addToList: function(book){ 
+					console.log(this.value.option)
+					// condition checks for a string because dropdown value is a string
+			    if (this.value.option == 'reading'){
+			    	console.log('this.value.option')
+			    	this.reading.push(this.book);
+			    	console.log(this.rreading);
+			    } else if (this.value.option == 'haveRead'){
+			    	this.haveRead.push(this.book);
+			    } else {
+			    	this.wantToRead.push(this.book);
+			    } 
+			    	console.log('end')    
 				}
 			}
 		}
