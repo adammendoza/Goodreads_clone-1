@@ -30,11 +30,11 @@
 		},
 		methods: {
 				addToList: function(book){
-					if (this.value.option == this.reading){
+					if (this.value.option === reading){
 						this.reading.push({
-							title: book.title,
-							ISBN: book.ISBN,
-							author: book.author
+							title: this.book.title,
+							ISBN: this.book.ISBN,
+							author: this.book.author
 						});
 						console.log(this);
 					// } else if (this.value.option == haveRead){
