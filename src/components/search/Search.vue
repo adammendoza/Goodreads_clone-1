@@ -4,6 +4,9 @@
       <input class="form-control mr-sm-2" type="text" placeholder="Enter book title, author, or ISBN" aria-label="Search" v-model="search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+    <p>reading {{ mylist.reading }} </p>
+    <p>haveRead {{ mylist.haveRead }} </p>
+    <p>wantToRead {{ mylist.wantToRead }} </p>
 		<app-card v-for="book in filteredBooks" :book="book"></app-card>
 	</div>
 </template>
@@ -15,7 +18,7 @@
 	export default {
 		data(){
 			return{
-				mylist: mylist, //to use in template above
+				mylist: mylist, //to use in template above - if you want a javascript variable to be used in template, u must add that in. Same with methods, if you want to call a function from the template, add that in. 
 				books:[
 					{ ISBN: '0385351399', title: 'The Circle', author: 'Dave Eggers' },
 					{ ISBN: '1594204233', title: 'Bleeding Edge', author: 'Thomas Pynchon' },

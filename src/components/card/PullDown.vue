@@ -8,11 +8,11 @@
 		    <option :value="{ 'option': 'wantToRead' }">Want to Read</option>
 		  </select>
 		</div>
-		<p>value: {{ value.option }} </p>
+<!-- 		<p>value: {{ value.option }} </p>
 		<p>book title: {{ book.title}} </p>
-		<p>reading: {{ reading }} </p>
+		<p>reading: {{ mylist.reading }} </p>
 		<p>read: {{ haveRead }} </p>
-		<p>want to read: {{ wantToRead }} </p>
+		<p>want to read: {{ wantToRead }} </p> -->
 	</div>
 
 </template>
@@ -45,10 +45,10 @@
 	        mylist[list] = mylist[list].filter(item => {
 	          return item !== this.book;
 	        });
+	        console.log(mylist[list]);
 	      }
 	      			//Add the book to selected list.
 	      mylist[this.value.option].push(this.book);
-	            console.log(mylist);
 	            // see Search.vue for updated data
 	    }
 
