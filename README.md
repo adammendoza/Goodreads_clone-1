@@ -9,4 +9,4 @@
 - Search bar and computed property search with filter
 - Pull-down select component placed in Card, data binding
 - JS code to add a book to selected list
-- Remove from the other lists if it's there; make code concise
+- Remove from the other lists if it's there; make it Dry; rewrite to make it concise
