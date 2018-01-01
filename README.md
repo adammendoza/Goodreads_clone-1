@@ -8,4 +8,5 @@
 - Pass book data with prop from search to card
 - Search bar and computed property search with filter
 - Pull-down select component placed in Card, data binding
-- JS code to add a book to selected list, and remove from the other lists if it's there
+- JS code to add a book to selected list
+- Remove from the other lists if it's there; make code concise
