@@ -10,9 +10,12 @@
 
 <script>
 	import Card from '../card/Card.vue'
+	import mylist from '../../list' // same list used in pulldown.vue
+
 	export default {
 		data(){
 			return{
+				mylist: mylist, //to use in template above
 				books:[
 					{ ISBN: '0385351399', title: 'The Circle', author: 'Dave Eggers' },
 					{ ISBN: '1594204233', title: 'Bleeding Edge', author: 'Thomas Pynchon' },

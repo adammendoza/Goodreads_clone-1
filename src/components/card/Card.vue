@@ -14,7 +14,6 @@
 </template>
 
 <script>
-	import { eventBus } from '../../main'
 	import PullDown from './PullDown.vue'
 
 	export default {
