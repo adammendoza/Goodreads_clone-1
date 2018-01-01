@@ -34,13 +34,52 @@
 					console.log(this.value.option)
 					// condition checks for a string because dropdown value is a string
 			    if (this.value.option == 'reading'){
-			    	console.log('this.value.option')
 			    	this.reading.push(this.book);
-			    	console.log(this.rreading);
+			    	console.log(this.reading);
+
+			    	for(var i = 0; i < this.haveRead.length; i++) {
+					    if(this.haveRead[i].ISBN == this.book.ISBN) {
+					        this.haveRead.splice(i, 1);
+					        break;
+					    }
+						}
+						for(var i = 0; i < this.wantToRead.length; i++) {
+					    if(this.wantToRead[i].ISBN == this.book.ISBN) {
+					        this.wantToRead.splice(i, 1);
+					        break;
+					    }
+						}
+			    	
 			    } else if (this.value.option == 'haveRead'){
 			    	this.haveRead.push(this.book);
+
+			    	for(var i = 0; i < this.reading.length; i++) {
+					    if(this.reading[i].ISBN == this.book.ISBN) {
+					        this.reading.splice(i, 1);
+					        break;
+					    }
+						}
+						for(var i = 0; i < this.wantToRead.length; i++) {
+					    if(this.wantToRead[i].ISBN == this.book.ISBN) {
+					        this.wantToRead.splice(i, 1);
+					        break;
+					    }
+						}
 			    } else {
 			    	this.wantToRead.push(this.book);
+
+			    	for(var i = 0; i < this.haveRead.length; i++) {
+					    if(this.haveRead[i].ISBN == this.book.ISBN) {
+					        this.haveRead.splice(i, 1);
+					        break;
+					    }
+						}
+						for(var i = 0; i < this.reading.length; i++) {
+					    if(this.reading[i].ISBN == this.book.ISBN) {
+					        this.reading.splice(i, 1);
+					        break;
+					    }
+						}
 			    } 
 			    	console.log('end')    
 				}
