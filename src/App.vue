@@ -17,6 +17,7 @@
     },
     created() {
       this.$store.dispatch('initBooks');
+      this.$store.dispatch('initList');
     }
   }
 </script>

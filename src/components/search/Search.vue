@@ -13,12 +13,12 @@
 
 <script>
 	import Card from '../card/Card.vue'
-	import mylist from '../../list' // same list used in pulldown.vue
+	// import mylist from '../../list' // same list used in pulldown.vue
 
 	export default {
 		data(){
 			return{
-				mylist: mylist, //to use in template above - if you want a javascript variable to be used in template, u must add that in. Same with methods, if you want to call a function from the template, add that in. 
+				// mylist: mylist, //to use in template above - if you want a javascript variable to be used in template, u must add that in. Same with methods, if you want to call a function from the template, add that in. 
 				search: ''
 			}
 		},
@@ -28,6 +28,9 @@
 		computed: {
 			books() {
 				return this.$store.getters.books;
+			},
+			mylist() {
+				return this.$store.getters.mylist;
 			},
 			filteredBooks: function(){
 				return this.books.filter((book)=>{
