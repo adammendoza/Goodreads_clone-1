@@ -14,6 +14,7 @@
 
 <script>
 
+// import store from "../../store/modules/profile.js"
 	// import mylist from "../../list"; 
 
 	export default {
@@ -32,15 +33,17 @@
 		methods: {
 
 	    addToList() {
-	      for (var list in mylist) { 
+	    	console.log(this.$store.getters.mylist);
+
+	      for (var list in this.mylist) { 
 	      			// Use filter method to remove the book from all the lists prior to adding it.
-	        mylist[list] = mylist[list].filter(item => {
+	        this.mylist[list] = this.mylist[list].filter(item => {
 	          return item !== this.book;
 	        });
-	        console.log(mylist[list]);
+	        console.log(this.mylist[list]);
 	      }
 	      			//Add the book to selected list.
-	      mylist[this.value.option].push(this.book);
+	      this.mylist[this.value.option].push(this.book);
 	            // see Search.vue for updated data
 	    	}
 			}
