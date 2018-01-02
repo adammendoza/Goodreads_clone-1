@@ -7,7 +7,7 @@
     <p>reading {{ mylist.reading }} </p>
     <p>haveRead {{ mylist.haveRead }} </p>
     <p>wantToRead {{ mylist.wantToRead }} </p>
-		<app-card v-for="book in filteredBooks" :book="book"></app-card>
+		<app-card v-for="book in filteredBooks" :book="book" :data="book" :key="book.id" ></app-card>
 	</div>
 </template>
 
