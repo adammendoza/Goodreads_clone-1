@@ -31,20 +31,24 @@
 				}
 			},
 		methods: {
+	     addToList() {
+	     	const choice = {
+					selection: this.value.option
+				}
+				console.log(choice.selection);
+	     	this.$store.dispatch('addToList', choice);
+	    // 	console.log(this.$store.getters.mylist);
 
-	    addToList() {
-	    	console.log(this.$store.getters.mylist);
-
-	      for (var list in this.mylist) { 
-	      			// Use filter method to remove the book from all the lists prior to adding it.
-	        this.mylist[list] = this.mylist[list].filter(item => {
-	          return item !== this.book;
-	        });
-	        console.log(this.mylist[list]);
-	      }
-	      			//Add the book to selected list.
-	      this.mylist[this.value.option].push(this.book);
-	            // see Search.vue for updated data
+	    //   for (var list in this.mylist) { 
+	    //   			// Use filter method to remove the book from all the lists prior to adding it.
+	    //     this.mylist[list] = this.mylist[list].filter(item => {
+	    //       return item !== this.book;
+	    //     });
+	    //     console.log(this.mylist[list]);
+	    //   }
+	    //   			//Add the book to selected list.
+	    //   this.mylist[this.value.option].push(this.book);
+	    //         // see Search.vue for updated data
 	    	}
 			}
 		};
