@@ -14,9 +14,6 @@
 
 <script>
 
-// import store from "../../store/modules/profile.js"
-	// import mylist from "../../list"; 
-
 	export default {
 		props: ['book'],
 		data(){
@@ -33,22 +30,11 @@
 		methods: {
 	     addToList() {
 	     	const choice = {
-					selection: this.value.option
+					selection: this.value.option,
+					book: this.book
 				}
 				console.log(choice.selection);
 	     	this.$store.dispatch('addToList', choice);
-	    // 	console.log(this.$store.getters.mylist);
-
-	    //   for (var list in this.mylist) { 
-	    //   			// Use filter method to remove the book from all the lists prior to adding it.
-	    //     this.mylist[list] = this.mylist[list].filter(item => {
-	    //       return item !== this.book;
-	    //     });
-	    //     console.log(this.mylist[list]);
-	    //   }
-	    //   			//Add the book to selected list.
-	    //   this.mylist[this.value.option].push(this.book);
-	    //         // see Search.vue for updated data
 	    	}
 			}
 		};

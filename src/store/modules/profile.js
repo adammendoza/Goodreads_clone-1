@@ -8,18 +8,18 @@ const mutations = {
 	'SET_MYLIST' (state, mylist) {
 		state.mylist = mylist;
 	},
-	'ADD_TO_LIST'(state, {selection}){
+	'ADD_TO_LIST'(state, {selection, book}){
   	// console.log(this.$store.getters.mylist);
 
     for (var list in state.mylist) { 
     			// Use filter method to remove the book from all the lists prior to adding it.
       state.mylist[list] = state.mylist[list].filter(item => {
-        return item !== state.book;
+        return item !== book;
       });
       console.log(state.mylist[list]);
     }
     			//Add the book to selected list.
-    state.mylist[selection].push(state.book);
+    state.mylist[selection].push(book);
     console.log(state.mylist[selection])
 	}
 };
