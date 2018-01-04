@@ -31,14 +31,25 @@
 			},
 			mylist() {
 				return this.$store.getters.mylist;
-			},
-			filteredBooks: function(){
-				return this.books.filter((book)=>{
-					return book.title.toLowerCase().match(this.search) || book.ISBN.toLowerCase().match(this.search) || book.author.toLowerCase().match(this.search);
-				});
 			}
+			// filteredBooks: function(){
+			// 	return this.books.filter((book)=>{
+			// 		return book.title.toLowerCase().match(this.search) || book.ISBN.toLowerCase().match(this.search) || book.author.toLowerCase().match(this.search);
+			// 	});
+			// }
+			},
+
+		methods: {
+	    filteredBooks() {
+	     	const search = {
+					searchTerm: this.search
+				}
+				console.log(search.searchTerm);
+	     	this.$store.dispatch('filteredBooks', search);
 		}
 	}
+};
+
 </script>
 
 <style>
