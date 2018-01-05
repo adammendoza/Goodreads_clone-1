@@ -10,4 +10,5 @@
 - Pull-down select component placed in Card, data binding
 - JS code to add a book to selected list
 - Remove from the other lists if it's there; make it Dry; rewrite to make it concise
-- Vuex
+- Transfered all state management to Vuex
+- 3 state toggle button in profile

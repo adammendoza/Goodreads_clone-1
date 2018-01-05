@@ -6,19 +6,17 @@ const state = {
 };
 
 const mutations = {
+	//mutations are pretty dumb things and all you should do there is change the state from one set of value(s) to another.
 	'SET_BOOKS' (state, books) {
 		state.books = books;
 	},
-	// 'FILTERED_BOOKS' (state, { searchTerm }) {
-	// 	return state.books.filter((book)=>{
-	// 		return book.title.toLowerCase().match(searchTerm) || book.ISBN.toLowerCase().match(searchTerm) || book.author.toLowerCase().match(searchTerm);
-	// 	});
-	// }
 	'FILTERED_BOOKS' (state, { searchTerm }) {
 		state.searchTerm = searchTerm
 	}
 };
 const actions = {
+	//If you need to get something asynchronously, ie via a web request to a server, you cannot do this in a mutation, only in an action.
+	//A nicety of Actions, is that they can call other actions and multiple mutations.
 	initBooks: ({commit}) => {
 		commit('SET_BOOKS', books);
 	},

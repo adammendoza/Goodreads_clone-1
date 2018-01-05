@@ -13,15 +13,14 @@
 
 <script>
 	import Card from '../card/Card.vue'
-	// import mylist from '../../list' // same list used in pulldown.vue
 
 	export default {
-		data(){
-			return{
-				// mylist: mylist, //to use in template above - if you want a javascript variable to be used in template, u must add that in. Same with methods, if you want to call a function from the template, add that in. 
-				search: ''
-			}
-		},
+		// data(){
+		// 	return{
+		// 		//to use in template above - if you want a javascript variable to be used in template, u must add that in. Same with methods, if you want to call a function from the template, add that in. 
+		// 		// search: ''
+		// 	}
+		// },
 		components: {
 			appCard: Card
 		},
@@ -48,7 +47,7 @@
 			storeSearch (event) {
 				this.$store.dispatch('filteredBooks', { searchTerm: event.target.value })
 			}
-			
+
 	 //    filteredBooks() {
 	 //     	const search = {
 		// 			searchTerm: this.search
