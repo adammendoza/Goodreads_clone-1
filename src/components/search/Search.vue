@@ -1,9 +1,9 @@
 <template>
 	<div>
 		<form class=" form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Enter book title, author, or ISBN" aria-label="Search" v-model="search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+      <input class="form-control mr-sm-2" type="text" placeholder="Enter book title, author, or ISBN" aria-label="Search" @input="storeSearch">
+<!--       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+ -->    </form>
     <p>reading {{ mylist.reading }} </p>
     <p>haveRead {{ mylist.haveRead }} </p>
     <p>wantToRead {{ mylist.wantToRead }} </p>
@@ -31,22 +31,31 @@
 			},
 			mylist() {
 				return this.$store.getters.mylist;
+			}, 
+
+			filteredBooks() {
+				return this.$store.getters.filteredBooks
 			}
 			// filteredBooks: function(){
 			// 	return this.books.filter((book)=>{
 			// 		return book.title.toLowerCase().match(this.search) || book.ISBN.toLowerCase().match(this.search) || book.author.toLowerCase().match(this.search);
 			// 	});
 			// }
-			},
+		},
 
 		methods: {
-	    filteredBooks() {
-	     	const search = {
-					searchTerm: this.search
-				}
-				console.log(search.searchTerm);
-	     	this.$store.dispatch('filteredBooks', search);
-		}
+
+			storeSearch (event) {
+				this.$store.dispatch('filteredBooks', { searchTerm: event.target.value })
+			}
+			
+	 //    filteredBooks() {
+	 //     	const search = {
+		// 			searchTerm: this.search
+		// 		}
+		// 		console.log(search.searchTerm);
+	 //     	this.$store.dispatch('filteredBooks', search);
+		// }
 	}
 };
 
