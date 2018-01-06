@@ -39,7 +39,7 @@
 			}
 		};
 </script>
-<style>
+<style scoped>
 	.dropdown {
 		margin-bottom: 20px;
 	}

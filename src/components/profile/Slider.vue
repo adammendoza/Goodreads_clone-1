@@ -8,7 +8,7 @@
         <input type="radio" name="options" id="Off" />OFF</label>
 </div> -->
 
-	<div class="wrapper">
+	<div class="wrapper ">
 	  <div class="toggle_radio">
 	    <input type="radio" class="toggle_option" id="first_toggle" value="first_toggle" name="toggle_option" v-model="currentView">
 	    <input type="radio" checked class="toggle_option" id="second_toggle" value="second_toggle" name="toggle_option" v-model="currentView">
@@ -17,12 +17,14 @@
 	    <label for="second_toggle"><p>Second Button</p></label>
 	    <label for="third_toggle"><p>Third Button</p></label>
 	    <div class="toggle_option_slider">
-	    <span>Picked: {{ picked }} </span>
-	    </div>
+<!-- 	    <span>Picked: {{ picked }} </span>
+ -->	    </div>
 	  </div>
 
-  	<component :is="currentView"></component>
-
+  	
+  	<div>
+  		<component :is="currentView"></component>
+  	</div>
 <!-- 	  <app-read v-show="picked.first_toggle"></app-read>
 		<app-reading v-show="picked.second_toggle"></app-reading>
 		<app-want-to-read v-show="picked.third_toggle"></app-want-to-read> -->
@@ -50,22 +52,34 @@
 	}
 </script>
 
-<style>
+<style scoped>
+
 	@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+
+div.row { text-align: center; }
+div.row > div.wrapper { margin: 0 auto; width: 1110px; }
+
+
 *{
   margin:0px;
   padding:0px;
 }
-html{
-  background: #497dd0;
-}
-.wrapper {
+
+div.wrapper {
   margin: 100px 0;
-}
+  background-color: #497dd0;
+/*  display: inline-block;
+*/}
+
+/*div.toggle-radio {
+	margin-top: 30px !important;
+}*/
 .toggle_radio{
   position: relative;
   background: rgba(255,255,255,.1);
   margin: 4px auto;
+  margin-top: 50px;
   overflow: hidden;
   padding: 0 !important;
   -webkit-border-radius: 50px;

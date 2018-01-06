@@ -60,7 +60,7 @@
 
 </script>
 
-<style>
+<style scoped>
 	form.form-inline.my-2.my-lg-0 {
 	  padding-top: 30px;
 	  padding-bottom: 30px;
