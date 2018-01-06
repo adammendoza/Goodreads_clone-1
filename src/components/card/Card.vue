@@ -1,6 +1,6 @@
 <template>
 		<!-- Bootstrap card styling -->
-		<div class="card" style="width: 22rem;">
+		<div class="card" style="width: 20rem;">
 		  <img class="card-img-top" alt="Card image cap">
 		  <div class="card-body">
 		    <h5 class="card-title">{{ book.title }}</h5>
