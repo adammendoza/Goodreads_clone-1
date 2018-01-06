@@ -10,9 +10,9 @@
 
 	<div class="wrapper">
 	  <div class="toggle_radio">
-	    <input type="radio" class="toggle_option" id="first_toggle" value="first_toggle" name="toggle_option" v-model="picked">
-	    <input type="radio" checked class="toggle_option" id="second_toggle" value="second_toggle" name="toggle_option" v-model="picked">
-	    <input type="radio" class="toggle_option" id="third_toggle" value="third_toggle" name="toggle_option" v-model="picked">
+	    <input type="radio" class="toggle_option" id="first_toggle" value="first_toggle" name="toggle_option" v-model="currentView">
+	    <input type="radio" checked class="toggle_option" id="second_toggle" value="second_toggle" name="toggle_option" v-model="currentView">
+	    <input type="radio" class="toggle_option" id="third_toggle" value="third_toggle" name="toggle_option" v-model="currentView">
 	    <label for="first_toggle"><p>First Button</p></label>
 	    <label for="second_toggle"><p>Second Button</p></label>
 	    <label for="third_toggle"><p>Third Button</p></label>
@@ -38,8 +38,8 @@
 	export default {
 		data(){
 			return {
-				picked: [],
-				currentView: ''
+				// picked: [],
+				currentView: 'first_toggle'
 			};
 		},
 		components: {
