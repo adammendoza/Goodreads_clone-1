@@ -29,9 +29,15 @@
 </script>
 
 <style scoped>
-
+/*
 div.listContents { text-align: center; }
-div.listContents > div.listContentBooks { margin: 0 auto; width: 1110px; }
+div.listContents > div.listContentBooks { margin: 0 auto; width: 1110px; }*/
+
+	div.listContentBooks {
+		display: flex;
+		align-items: center;
+	  justify-content: center;
+	}
 
 	form.form-inline.my-2.my-lg-0 {
 	  padding-top: 30px;
