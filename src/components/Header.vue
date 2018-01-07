@@ -22,7 +22,7 @@
 	  			aria-haspopup="true"
 	  			aria-expanded="false">Save & Load <span class="caret"></span></a>
 	  		<ul class="dropdown-menu">
-	  			<li><a href="#">Save Data</a></li>
+	  			<li><a href="#" @click="saveData">Save Data</a></li>
 	  			<li><a href="#">Load Data</a></li>
 	  		</ul>
 	  	</li>
@@ -30,6 +30,27 @@
 	</nav>
 	<!-- You need to handle dropdowns with javascript, and you could use Bootstrap js for that, but you want to handle all with vue. -->
 </template>
+
+<script>
+	import axios from 'axios';
+
+	export default {
+		methods: {
+
+				saveData(){
+					const data = {
+						haveRead: this.$store.getters.mylist.haveRead,
+						reading: this.$store.getters.mylist.reading,
+						wantToRead: this.$store.getters.mylist.wantToRead
+					}
+					console.log(data.haveRead, data.reading, data.wantToRead)
+					axios.post('https://goodreadsclone-c0542.firebaseio.com/users.json', data)
+						.then(res => console.log(res))
+						.catch(error => console.log(error))
+				}
+		}
+	}
+</script>
 
 <style>
 	nav.navbar.navbar-expand-lg.navbar-light.bg-light{
