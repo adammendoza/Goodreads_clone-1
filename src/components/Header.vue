@@ -44,7 +44,7 @@
 						wantToRead: this.$store.getters.mylist.wantToRead
 					}
 					console.log(data.haveRead, data.reading, data.wantToRead)
-					axios.post('https://goodreadsclone-c0542.firebaseio.com/users.json', data)
+					axios.put('https://goodreadsclone-c0542.firebaseio.com/data.json', data)
 						.then(res => console.log(res))
 						.catch(error => console.log(error))
 				}
