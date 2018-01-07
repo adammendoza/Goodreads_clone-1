@@ -25,9 +25,9 @@
   	<div>
   		<component :is="currentView"></component>
   	</div>
-<!-- 	  <app-read v-show="picked.first_toggle"></app-read>
-		<app-reading v-show="picked.second_toggle"></app-reading>
-		<app-want-to-read v-show="picked.third_toggle"></app-want-to-read> -->
+<!-- 	  <app-read v-show="picked === 'first_toggle'"></app-read>
+		<app-reading v-show="picked === 'second_toggle'"></app-reading>
+		<app-want-to-read v-show="picked === 'third_toggle'"></app-want-to-read> -->
 
 	</div>
 </template>
@@ -40,7 +40,7 @@
 	export default {
 		data(){
 			return {
-				// picked: [],
+				// picked: null,
 				currentView: 'first_toggle'
 			};
 		},

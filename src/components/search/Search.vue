@@ -67,6 +67,6 @@
 /*	  padding-left: 30px;
 */	}
 	input.form-control.mr-sm-2 {
-		width: 90% !important;
+		width: 100%;
 	} 
 </style>

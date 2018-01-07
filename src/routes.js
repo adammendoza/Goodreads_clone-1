@@ -7,5 +7,5 @@ export const routes = [
 	{ path: '/', component: Home },
 	{ path: '/search', component: Search },
 	{ path: '/profile', component: Profile },
-	{ path: '/book', component: Book },
+	{ path: '/books', component: Book },
 ];
