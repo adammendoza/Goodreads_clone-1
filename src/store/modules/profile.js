@@ -1,5 +1,7 @@
 import mylist from '../../data/mylist';
 
+import axios from 'axios';
+
 const state = {
 	mylist: []
 };
@@ -21,7 +23,8 @@ const mutations = {
     			//Add the book to selected list.
     state.mylist[selection].push(book);
     console.log(state.mylist[selection])
-	}
+	}, 
+
 };
 
 const actions = {
@@ -30,6 +33,26 @@ const actions = {
 	},
 	addToList: ({commit}, choice) => {
 		commit('ADD_TO_LIST', choice);
+	},
+	loadData: ({commit}) => {
+		axios.get('https://goodreadsclone-c0542.firebaseio.com/data.json')
+			// .then(response => console.log(response.data.haveRead))
+			.then(response => {
+					console.log(response.data.haveRead)
+					console.log(response.data.wantToRead)
+					const haveRead = response.data.haveRead;
+					const reading = response.data.reading;
+					const wantToRead = response.data.wantToRead;
+
+					const mylist = {
+						haveRead,
+						reading,
+						wantToRead
+					};
+				})
+			.catch(error => console.log(error))
+
+			commit('SET_MYLIST', mylist);
 	}
 };
 
