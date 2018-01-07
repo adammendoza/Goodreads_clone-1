@@ -1,13 +1,13 @@
 <template>
-	<div class="listContents">
-<!--     <p>reading {{ mylist.reading }} </p>
+<!-- 	<div class="listContents">
+ --><!--     <p>reading {{ mylist.reading }} </p>
     <p>haveRead {{ mylist.haveRead }} </p>
     <p>wantToRead {{ mylist.wantToRead }} </p> -->
     <div class="listContentBooks">
     	<app-card v-for="book in mylist.reading" :book="book" :data="book" :key="book.id" ></app-card>
     </div>
-	</div>
-</template>
+<!-- 	</div>
+ --></template>
 
 <script>
 	import Card from '../card/Card.vue'
