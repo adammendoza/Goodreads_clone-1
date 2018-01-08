@@ -36,7 +36,6 @@ const actions = {
 	},
 	loadData: ({commit}) => {
 		axios.get('https://goodreadsclone-c0542.firebaseio.com/data.json')
-			// .then(response => console.log(response.data.haveRead))
 			.then(response => {
 					console.log(response.data.haveRead)
 					console.log(response.data.wantToRead)
@@ -49,10 +48,14 @@ const actions = {
 						reading,
 						wantToRead
 					};
+					console.log(mylist);
+
+					commit('SET_MYLIST', mylist);
+
 				})
 			.catch(error => console.log(error))
 
-			commit('SET_MYLIST', mylist);
+			
 	}
 };
 
