@@ -1,4 +1,4 @@
-import mylist from '../../data/mylist';
+import myInitList from '../../data/mylist';
 
 import axios from 'axios';
 
@@ -16,12 +16,18 @@ const mutations = {
     for (var list in state.mylist) { 
     			// Use filter method to remove the book from all the lists prior to adding it.
       state.mylist[list] = state.mylist[list].filter(item => {
-        return item !== book;
+				// return item !== book; // Shouldn't compare 2 objects
+				//At this time, it reference to the same object, when you save and load, it create new object with same props, but allocated at different memory buffer. So it understand 2 objects are different; This is why previously it wouldn't add the book 2ce to the same list, but upon loading, since it creates a new object it does. Unless you use a unique prop. 
+				return item.id !== book.id;
       });
       console.log(state.mylist[list]);
     }
-    			//Add the book to selected list.
-    state.mylist[selection].push(book);
+		
+		//Add the book to selected list.
+		if (selection) { // Don't forget to check when user choose the first selection, currently has no value and display text: 'Choose...'
+			state.mylist[selection].push(book);
+		}
+    
     console.log(state.mylist[selection])
 	}, 
 
@@ -29,33 +35,33 @@ const mutations = {
 
 const actions = {
 	initList: ({commit}) => {
-		commit('SET_MYLIST', mylist);
+		commit('SET_MYLIST', myInitList);
 	},
 	addToList: ({commit}, choice) => {
 		commit('ADD_TO_LIST', choice);
 	},
 	loadData: ({commit}) => {
 		axios.get('https://goodreadsclone-c0542.firebaseio.com/data.json')
+			// .then(response => console.log(response.data.haveRead))
 			.then(response => {
+				let mylist = myInitList;
+
+				if (response.data !== null) { // Should check null first
 					console.log(response.data.haveRead)
 					console.log(response.data.wantToRead)
-					const haveRead = response.data.haveRead;
-					const reading = response.data.reading;
-					const wantToRead = response.data.wantToRead;
+					const haveRead = response.data.haveRead || []; // If we save an empty array, Firebase won't save as an empty array but nothing, so we should set an empty array if we get undefined from Firebase.
+					const reading = response.data.reading || [];
+					const wantToRead = response.data.wantToRead || [];
 
-					const mylist = {
+					mylist = { // If we have data, replace initial list with our data
 						haveRead,
 						reading,
 						wantToRead
 					};
-					console.log(mylist);
-
-					commit('SET_MYLIST', mylist);
-
-				})
+				}
+				commit('SET_MYLIST', mylist);
+			})
 			.catch(error => console.log(error))
-
-			
 	}
 };
 
@@ -72,7 +78,5 @@ export default {
 	getters
 };
 
-//addToList instead of buystock in search.js
-//keep watching videos for how to finish up connecting this file to the rest 
-//or rewatch the first one
+
 
