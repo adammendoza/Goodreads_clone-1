@@ -35,6 +35,7 @@
 			filteredBooks() {
 				return this.$store.getters.filteredBooks
 			}
+			//before Vuex application
 			// filteredBooks: function(){
 			// 	return this.books.filter((book)=>{
 			// 		return book.title.toLowerCase().match(this.search) || book.ISBN.toLowerCase().match(this.search) || book.author.toLowerCase().match(this.search);
@@ -47,7 +48,7 @@
 			storeSearch (event) {
 				this.$store.dispatch('filteredBooks', { searchTerm: event.target.value })
 			}
-
+			//incorrect vuex application
 	 //    filteredBooks() {
 	 //     	const search = {
 		// 			searchTerm: this.search

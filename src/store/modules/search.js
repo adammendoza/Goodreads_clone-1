@@ -1,4 +1,6 @@
-import books from '../../data/books';
+// import books from '../../data/books';
+import axios from 'axios';
+
 
 const state = {
 	books: [],
@@ -10,6 +12,7 @@ const mutations = {
 	'SET_BOOKS' (state, books) {
 		state.books = books;
 	},
+
 	'FILTERED_BOOKS' (state, { searchTerm }) {
 		state.searchTerm = searchTerm
 	}
@@ -18,6 +21,19 @@ const actions = {
 	//If you need to get something asynchronously, ie via a web request to a server, you cannot do this in a mutation, only in an action.
 	//A nicety of Actions, is that they can call other actions and multiple mutations.
 	initBooks: ({commit}) => {
+
+		// Axios will help us get the xml content, so we must parse the content by ourself with xml parser
+		axios.get("https://www.goodreads.com/search/index.xml?key=yqCuegotHH26DtulmE47Ig&q=Ender%27s+Game")
+    	.then(response => {xml = response.data.results
+    	//parse xml into json with x2js library
+    	var x2js = new X2JS();
+			var document = x2js.xml2js(xml);
+ 
+			console.log(document.MyRootElement.ElementX[1].toString());
+			//create a json object with props and set book to it
+			//use mutation to set the state.books to the books from API
+    })
+
 		commit('SET_BOOKS', books);
 	},
 	filteredBooks: ({commit}, search) => {
