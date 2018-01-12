@@ -1,7 +1,7 @@
 <template>
 		<!-- Bootstrap card styling -->
 		<div class="card">
-		  <img class="card-img-top" alt="Card image cap">
+		  <img class="card-img-top" alt="Card image cap" :src="book.volumeInfo.imageLinks.thumbnail">
 		  <div class="card-body">
 		    <h5 class="card-title">{{ book.volumeInfo.title }}</h5>
 		    <h6>{{ book.volumeInfo.authors[0] }}</h6>
@@ -32,7 +32,13 @@
 
 div.card {
   width: 24%;
-/*	display: inline-block;
-*/	margin: 5px;
+	margin: 5px;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img.card-img-top {
+	width: 180px;
+	margin: 20px;
 }
 </style>

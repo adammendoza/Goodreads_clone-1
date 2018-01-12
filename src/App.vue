@@ -27,5 +27,7 @@
 body {
   padding-top: 30px;
 }
-
+p {
+  font-size: .8em;
+}
 </style>
