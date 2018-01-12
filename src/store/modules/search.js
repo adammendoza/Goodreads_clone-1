@@ -22,6 +22,8 @@ const actions = {
 	//A nicety of Actions, is that they can call other actions and multiple mutations.
 	initBooks: ({commit}) => {
 
+		//Unfortunately GoodReads does not include the CORS header in ANY of their api calls. So I will be using google API instead. 
+
 		// Axios will help us get the xml content, so we must parse the content by ourself with xml parser
 		// axios.get("https://www.goodreads.com/search/index.xml?key=yqCuegotHH26DtulmE47Ig&q=Ender%27s+Game")
   //   	.then(response => {xml = response.data.results
@@ -49,10 +51,9 @@ const actions = {
     			console.log(books);
     		}
 			commit('SET_BOOKS', books);
-			console.log("BOOKS VARIABLE" + books);
+			console.log("BOOKS VARIABLE " + state.books[0].id);
     	})
     }
-    console.log("STATE BOOKS:" + state.books);
 	},
 	filteredBooks: ({commit}, search) => {
 		commit('FILTERED_BOOKS', search);
