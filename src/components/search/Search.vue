@@ -9,8 +9,9 @@
     <p>wantToRead {{ mylist.wantToRead }} </p>
 <!-- 
 	commenting filtered books out, since now search works with API query parameter and not filtering the books data object, and changing "book in filteredBooks" to "book in books" -->
-
-		<app-card v-for="book in books" :book="book" :data="book" :key="book.id" ></app-card>
+		<div class="searchLayout">
+			<app-card v-for="book in books" :book="book" :data="book" :key="book.id" ></app-card>
+		</div>
 	</div>
 </template>
 
@@ -73,4 +74,8 @@
 	input.form-control.mr-sm-2 {
 		width: 100%;
 	} 
+	div.searchLayout {
+		display: flex;
+		flex: wrap;
+	}
 </style>
