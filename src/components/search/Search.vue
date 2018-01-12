@@ -75,7 +75,10 @@
 		width: 100%;
 	} 
 	div.searchLayout {
-		display: flex;
-		flex: wrap;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  overflow:none;
 	}
 </style>

@@ -34,9 +34,11 @@ div.listContents { text-align: center; }
 div.listContents > div.listContentBooks { margin: 0 auto; width: 1110px; }*/
 
 	div.listContentBooks {
-		display: flex;
-/*		align-items: center;
-	  justify-content: center;*/
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  overflow:none;
 	}
 
 	form.form-inline.my-2.my-lg-0 {

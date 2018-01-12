@@ -1,6 +1,6 @@
 <template>
 		<!-- Bootstrap card styling -->
-		<div class="card" style="width: 20rem;">
+		<div class="card">
 		  <img class="card-img-top" alt="Card image cap">
 		  <div class="card-body">
 		    <h5 class="card-title">{{ book.volumeInfo.title }}</h5>
@@ -31,8 +31,8 @@
 <style>
 
 div.card {
-	flex: 25%;
+  width: 24%;
 /*	display: inline-block;
-*/	margin: 10px;
+*/	margin: 5px;
 }
 </style>
