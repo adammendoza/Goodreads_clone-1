@@ -7,7 +7,10 @@
     <p>reading {{ mylist.reading }} </p>
     <p>haveRead {{ mylist.haveRead }} </p>
     <p>wantToRead {{ mylist.wantToRead }} </p>
-		<app-card v-for="book in filteredBooks" :book="book" :data="book" :key="book.id" ></app-card>
+<!-- 
+	commenting filtered books out, since now search works with API query parameter and not filtering the books data object, and changing "book in filteredBooks" to "book in books" -->
+
+		<app-card v-for="book in books" :book="book" :data="book" :key="book.id" ></app-card>
 	</div>
 </template>
 
