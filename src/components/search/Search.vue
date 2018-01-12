@@ -4,9 +4,9 @@
       <input class="form-control mr-sm-2" type="text" placeholder="Enter book title, author, or ISBN" aria-label="Search" @input="storeSearch">
 <!--       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
  -->    </form>
-    <p>reading {{ mylist.reading }} </p>
+<!--     <p>reading {{ mylist.reading }} </p>
     <p>haveRead {{ mylist.haveRead }} </p>
-    <p>wantToRead {{ mylist.wantToRead }} </p>
+    <p>wantToRead {{ mylist.wantToRead }} </p> -->
 <!-- 
 	commenting filtered books out, since now search works with API query parameter and not filtering the books data object, and changing "book in filteredBooks" to "book in books" -->
 		<div class="searchLayout">

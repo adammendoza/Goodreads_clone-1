@@ -30,7 +30,7 @@
 </script>
 <style>
 
-div.listContentBooks > div.card {
+div.card {
 	flex: 25%;
 /*	display: inline-block;
 */	margin: 10px;
