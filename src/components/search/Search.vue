@@ -2,6 +2,9 @@
 	<div>
 		<form class=" form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Enter book title, author, or ISBN" aria-label="Search" @input="storeSearch">
+
+<!-- Alternatively in Search.vue, remove @input from input and add ref="searchTerm" to it (get value by this ref); add @submit.prevent="storeSearch" to form; this way only 1 API call will be made when I hit enter after typed search term I need -->
+
 <!--       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
  -->    </form>
 <!--     <p>reading {{ mylist.reading }} </p>

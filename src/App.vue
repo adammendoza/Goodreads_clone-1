@@ -16,7 +16,10 @@
       appHeader: Header
     },
     created() {
-      this.$store.dispatch('initBooks');
+
+      //comment initBooks in store and comment dispatch action in App.vue. I don't have a boooks array to initate when I implement search API.
+
+      // this.$store.dispatch('initBooks');
       this.$store.dispatch('initList');
     }
   }

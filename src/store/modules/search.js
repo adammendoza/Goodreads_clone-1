@@ -20,7 +20,9 @@ const mutations = {
 const actions = {
 	//If you need to get something asynchronously, ie via a web request to a server, you cannot do this in a mutation, only in an action.
 	//A nicety of Actions, is that they can call other actions and multiple mutations.
-	initBooks: ({commit}) => {
+
+	//comment initBooks in store and comment dispatch action in App.vue. I don't have a boooks array to initate when I implement search API.
+	// initBooks: ({commit}) => {
 
 		//Unfortunately GoodReads does not include the CORS header in ANY of their api calls. So I will be using google API instead. 
 
@@ -35,14 +37,34 @@ const actions = {
 		// 	//create a json object with props and set book to it
 		// 	//use mutation to set the state.books to the books from API
   //   })
-  	console.log(state.searchTerm)
+//   	console.log(state.searchTerm)
 
-// 1. state.searchTerm doesn't save
+// // 1. state.searchTerm doesn't save
+
+// 		let books = [];
+
+//   	if(state.searchTerm !== null){
+// 		axios.get("https://www.googleapis.com/books/v1/volumes?q=" + "random")
+//     	.then(response => {
+//     		console.log(response)
+
+//     		for(var i=0; i<response.data.items.length; i++){
+//     			books.push(response.data.items[i]);
+//     			console.log(books);
+//     		}
+// 			commit('SET_BOOKS', books);
+// 			console.log("BOOKS VARIABLE " + state.books[0].id);
+//     	})
+//     }
+	// },
+	filteredBooks: ({commit}, search) => {
+
+		console.log(search)
 
 		let books = [];
 
-  	if(state.searchTerm !== null){
-		axios.get("https://www.googleapis.com/books/v1/volumes?q=" + "random")
+  	if(search !== null){
+		axios.get("https://www.googleapis.com/books/v1/volumes?q=" + search.searchTerm)
     	.then(response => {
     		console.log(response)
 
@@ -51,12 +73,11 @@ const actions = {
     			console.log(books);
     		}
 			commit('SET_BOOKS', books);
+			commit('FILTERED_BOOKS', search);
+
 			console.log("BOOKS VARIABLE " + state.books[0].id);
     	})
     }
-	},
-	filteredBooks: ({commit}, search) => {
-		commit('FILTERED_BOOKS', search);
 	}
 };
 
