@@ -30,7 +30,13 @@ const mutations = {
     
     console.log(state.mylist[selection])
 	}, 
-
+	'REMOVE_FROM_LIST'(state, book){
+    for (var list in state.mylist) { 
+      state.mylist[list] = state.mylist[list].filter(item => {
+				return item.id !== book.id;
+      });
+    }
+  }
 };
 
 const actions = {
@@ -39,6 +45,9 @@ const actions = {
 	},
 	addToList: ({commit}, choice) => {
 		commit('ADD_TO_LIST', choice);
+	},
+	removeFromList: ({commit}, book) => {
+		commit('REMOVE_FROM_LIST', book);
 	},
 	loadData: ({commit}) => {
 		axios.get('https://goodreadsclone-c0542.firebaseio.com/data.json')

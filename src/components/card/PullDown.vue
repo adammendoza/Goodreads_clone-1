@@ -7,6 +7,7 @@
 		    <option :value="{ 'option': 'haveRead' }">Have Read</option>
 		    <option :value="{ 'option': 'wantToRead' }">Want to Read</option>
 		  </select>
+		  <button type="button" class="btn btn-outline-info" @click="removeFromList">Remove</button>
 		</div>
 	</div>
 
@@ -35,12 +36,20 @@
 				}
 				console.log(choice.selection);
 	     	this.$store.dispatch('addToList', choice);
+	    	},
+	    removeFromList() {
+	    	const book = this.book
+	    	this.$store.dispatch('removeFromList', book);
 	    	}
 			}
 		};
 </script>
+
 <style scoped>
 	.dropdown {
 		margin-bottom: 20px;
+	}
+	button {
+		margin-left: 3px;
 	}
 </style>
