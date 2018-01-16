@@ -38,24 +38,6 @@ const actions = {
 		// 	//use mutation to set the state.books to the books from API
   //   })
 //   	console.log(state.searchTerm)
-
-// // 1. state.searchTerm doesn't save
-
-// 		let books = [];
-
-//   	if(state.searchTerm !== null){
-// 		axios.get("https://www.googleapis.com/books/v1/volumes?q=" + "random")
-//     	.then(response => {
-//     		console.log(response)
-
-//     		for(var i=0; i<response.data.items.length; i++){
-//     			books.push(response.data.items[i]);
-//     			console.log(books);
-//     		}
-// 			commit('SET_BOOKS', books);
-// 			console.log("BOOKS VARIABLE " + state.books[0].id);
-//     	})
-//     }
 	// },
 	filteredBooks: ({commit}, search) => {
 
