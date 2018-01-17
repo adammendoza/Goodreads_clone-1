@@ -7,7 +7,7 @@
 		    <option :value="{ 'option': 'haveRead' }">Have Read</option>
 		    <option :value="{ 'option': 'wantToRead' }">Want to Read</option>
 		  </select>
-		  <button type="button" class="btn btn-outline-info" @click="removeFromList">Remove</button>
+		  <button type="button" class="btn btn-outline-info" @click="removeFromList" v-if="$route.path== '/profile'">Remove</button>
 		</div>
 	</div>
 
