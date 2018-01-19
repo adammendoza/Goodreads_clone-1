@@ -13,4 +13,6 @@
 - Transfered all state management to Vuex
 - 3 state toggle button in profile toggles between Reading, Have Read, and Want to Read lists
 - Save the data to Firebase and load from Firebase
+- Use google books API to search catalogue. 
+- Add the remove button conditionally to only the profile route.
 
