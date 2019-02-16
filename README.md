@@ -1,5 +1,6 @@
 # Vue Goodreads Clone 
-## with API from Goodreads and Firebase backend
+## With API from Goodreads and Firebase backend
+### Deploy a Vue.js App with Firebase Hosting
 
 - Project Setup and Planning
 - Creating Components
