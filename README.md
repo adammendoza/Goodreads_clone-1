@@ -1,4 +1,5 @@
-# Goodreads Clone
+# Vue Goodreads Clone 
+## with API from Goodreads and Firebase backend
 
 - Project Setup and Planning
 - Creating Components
