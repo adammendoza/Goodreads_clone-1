@@ -11,7 +11,6 @@ const mutations = {
 		state.mylist = mylist;
 	},
 	'ADD_TO_LIST'(state, {selection, book}){
-  	// console.log(this.$store.getters.mylist);
 
     for (var list in state.mylist) { 
     			// Use filter method to remove the book from all the lists prior to adding it.
@@ -56,8 +55,8 @@ const actions = {
 				let mylist = myInitList;
 
 				if (response.data !== null) { // Should check null first
-					console.log(response.data.haveRead)
-					console.log(response.data.wantToRead)
+					// console.log(response.data.haveRead)
+					// console.log(response.data.wantToRead)
 					const haveRead = response.data.haveRead || []; // If we save an empty array, Firebase won't save as an empty array but nothing, so we should set an empty array if we get undefined from Firebase.
 					const reading = response.data.reading || [];
 					const wantToRead = response.data.wantToRead || [];
