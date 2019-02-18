@@ -7,6 +7,8 @@ Deploy a Vue.js App with Firebase Hosting
 by migrating vue-cli 2 to vue-cli-3
 https://medium.com/jinweijie/migrate-from-vue-cli-2-to-3-16f14e7febdc?fbclid=IwAR17AvoCQ4eJGes3KJL9Q0ymFMr6YEF7hbLqJqkSRXn9tWkdR0jjj-yyghU  
 Currently unable to build cli-2 app with cli-3.
+
+yarn dev to run locally
 _____________________________
 
 - Project Setup and Planning
