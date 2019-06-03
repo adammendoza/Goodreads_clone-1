@@ -6,7 +6,9 @@
 		    <h5 class="card-title">{{ book.volumeInfo.title }}</h5>
 		    <h6>{{ book.volumeInfo.authors[0] }}</h6>
 		    <p>Average Rating: {{ book.volumeInfo.averageRating }}</p>
-		    <p>Description: {{ book.volumeInfo.description }}</p>
+		    <div class="description">Description: {{ book.volumeInfo.description }}</div>
+		    <span>...</span>
+		    <br>
 		    <!-- Dropdown on the right, stars on the left. -->
 		    <app-pull-down :book="book"></app-pull-down>
 		  </div>
@@ -40,5 +42,13 @@ div.card {
 img.card-img-top {
 	width: 180px;
 	margin: 20px;
+}
+.card-body {
+	height: 500px;
+}
+.description {
+	overflow: hidden;
+  max-height: 35ch;
+  font-size: .8em;
 }
 </style>

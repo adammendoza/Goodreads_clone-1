@@ -75,10 +75,8 @@ It also depends on your code, if you don't use form, just an input, you also do 
 
 <style scoped>
 	form.form-inline.my-2.my-lg-0 {
-	  padding-top: 30px;
-	  padding-bottom: 30px;
-/*	  padding-left: 30px;
-*/	}
+		padding: 30px;
+	}
 	input.form-control.mr-sm-2 {
 		width: 100%;
 	} 

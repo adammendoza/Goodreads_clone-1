@@ -2,7 +2,7 @@
   <div class="container">
     <div class="logo">PRIMEREADS</div>
     <app-header></app-header>
-    <div class="row">
+    <div>
       <!-- <div class="col-xs-12"> -->
         <router-view></router-view>
       <!-- </div> -->
@@ -30,15 +30,15 @@
 
 body {
   background-image: url("assets/bookshelves.jpg");
-  height: 100vh;
+  height: 2000px;
 }
 p {
   font-size: .8em;
 }
 .container {
-  background-image: url("assets/coarse-paper.jpg");
+  background-image: url("assets/dark-red-background.jpg");
   padding: 0px;
-  height: 100vh;
+  height: 2000px;
 }
 .logo {
   font-family: 'Vast Shadow', cursive;

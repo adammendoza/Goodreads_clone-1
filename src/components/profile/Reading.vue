@@ -37,6 +37,7 @@
   display:flex;
   flex-wrap: wrap;
   overflow:none;
+  padding: 30px;
 	}
 
 

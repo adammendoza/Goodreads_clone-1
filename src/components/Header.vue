@@ -61,9 +61,6 @@
 </script>
 
 <style>
-	nav.navbar.navbar-expand-lg.navbar-light.bg-light{
-		margin-bottom: 20px;
-	}
 	nav {
 		display: flex;
 		justify-content: center;

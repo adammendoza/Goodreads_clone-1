@@ -1,6 +1,10 @@
 # Vue Goodreads Clone 
 >Vue Goodreads Clone with API from Goodreads and Firebase backend. Deploy a Vue.js App with Firebase Hosting.
 
+# Project Images
+
+![Vue Goodreads Clone Images](https://drive.google.com/file/d/1gd5_ArbBsuDRpo-MD1g_Hu4ameVrRJjN/view?usp=sharing)
+
 # Project Roadmap
 
 - Project Setup and Planning
