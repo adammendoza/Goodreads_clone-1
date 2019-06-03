@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <div class="logo">PRIMEREADS</div>
     <app-header></app-header>
     <div class="row">
       <!-- <div class="col-xs-12"> -->
@@ -28,9 +29,21 @@
 <style>
 
 body {
-  padding-top: 30px;
+  background-image: url("assets/bookshelves.jpg");
+  height: 100vh;
 }
 p {
   font-size: .8em;
+}
+.container {
+  background-image: url("assets/coarse-paper.jpg");
+  padding: 0px;
+  height: 100vh;
+}
+.logo {
+  font-family: 'Vast Shadow', cursive;
+  font-size: 7vw;
+  color: white;
+  text-align: center;
 }
 </style>

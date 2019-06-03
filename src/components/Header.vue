@@ -1,15 +1,15 @@
 <template>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<!-- Remove anchor tag and manage through vue. -->
-		<router-link to="/" class="navbar-brand">Goodreads</router-link>
+		<router-link to="/">PRIMEREADS</router-link>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 
 	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	    <ul class="navbar-nav mr-auto">
-	    	<router-link to="/search" activeClass="active" tag="li" class="nav-link"><a>Search</a></router-link>
-	    	<router-link to="/profile" activeClass="active" tag="li" class="nav-link"><a>Profile</a></router-link>
+	    <ul class="navbar-nav">
+	    	<router-link to="/search" activeClass="active" tag="li" class="nav-link"><a>SEARCH</a></router-link>
+	    	<router-link to="/profile" activeClass="active" tag="li" class="nav-link"><a>PROFILE</a></router-link>
 	    </ul>
 	  </div>
 	  <ul class="nav navbar-nav-navbar-right">
@@ -20,10 +20,10 @@
 	  			data-toggle="dropdown"
 	  			role="button"
 	  			aria-haspopup="true"
-	  			aria-expanded="false">Save & Load <span class="caret"></span></a>
+	  			aria-expanded="false">SAVE & LOAD<span class="caret"></span></a>
 	  		<ul class="dropdown-menu">
-	  			<li><a href="#" @click="saveData">Save Data</a></li>
-	  			<li><a href="#" @click="loadData">Load Data</a></li>
+	  			<li><a href="#" @click="saveData">SAVE DATA</a></li>
+	  			<li><a href="#" @click="loadData">LOAD DATA</a></li>
 	  		</ul>
 	  	</li>
 	  </ul>
@@ -63,5 +63,14 @@
 <style>
 	nav.navbar.navbar-expand-lg.navbar-light.bg-light{
 		margin-bottom: 20px;
+	}
+	nav {
+		display: flex;
+		justify-content: center;
+	}
+	a {
+		font-family: 'Stylish', sans-serif;
+		color: black;
+		font-size: 1.5rem;
 	}
 </style>
