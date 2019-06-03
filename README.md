@@ -22,6 +22,8 @@
 - Save the data to Firebase and load from Firebase
 - Use google books API to search catalogue. 
 - Add the remove button conditionally to only the profile route.
+- Rough design of the pages. 
+- Home page with carousel of images. A quote. Intro to the workings of the app.
 
 ### Work in progress:
 App works locally but need to
