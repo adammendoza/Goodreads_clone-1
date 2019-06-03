@@ -13,9 +13,9 @@
 	    <input type="radio" class="toggle_option" id="first_toggle" value="first_toggle" name="toggle_option" v-model="currentView">
 	    <input type="radio" checked class="toggle_option" id="second_toggle" value="second_toggle" name="toggle_option" v-model="currentView">
 	    <input type="radio" class="toggle_option" id="third_toggle" value="third_toggle" name="toggle_option" v-model="currentView">
-	    <label for="first_toggle"><p>Read</p></label>
-	    <label for="second_toggle"><p>Reading</p></label>
-	    <label for="third_toggle"><p>Want to Read</p></label>
+	    <label for="first_toggle"><h3>Read</h3></label>
+	    <label for="second_toggle"><h3>Reading</h3></label>
+	    <label for="third_toggle"><h3>Want to Read</h3></label>
 	    <div class="toggle_option_slider">
 <!-- 	    <span>Picked: {{ picked }} </span>
  -->	    </div>
@@ -71,7 +71,7 @@ div.row > div.wrapper { margin: 0 auto; width: 1110px; }
 }*/
 
 div.wrapper {
-  margin: 100px 0;
+  margin: 50px 0;
 /*  background-color: #497dd0;*/
 }
 
@@ -87,8 +87,8 @@ div.wrapper {
   -moz-border-radius: 50px;
   border-radius: 50px;
   position: relative;
-  height: 26px;
-  width: 318px;
+  height: 36px;
+  width: 488px;
 }
 .toggle_radio > * {
   float: left;
@@ -102,7 +102,7 @@ div.wrapper {
   color: rgba(255,255,255,.9);
   z-index: 0;
   display: block;
-  width: 100px;
+  width: 150px;
   height: 20px;
   margin: 3px 3px;
   -webkit-border-radius: 50px;
@@ -118,8 +118,8 @@ div.wrapper {
 .toggle_option_slider{
   /*display: none;*/
   /*background: red;*/
-  width: 100px;
-  height: 20px;
+  width: 150px;
+  height: 30px;
   position: absolute;
   top: 3px;
   -webkit-border-radius: 50px;
@@ -138,10 +138,10 @@ div.wrapper {
 }
 #second_toggle:checked ~ .toggle_option_slider{
   background: rgba(255,255,255,.3);
-  left: 109px;
+  left: 154px;
 }
 #third_toggle:checked ~ .toggle_option_slider{
   background: rgba(255,255,255,.3);
-  left: 215px;
+  left: 315px;
 }
 </style>
