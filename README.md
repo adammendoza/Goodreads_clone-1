@@ -3,7 +3,7 @@
 
 # Project Images
 
-![Vue Goodreads Clone Images](https://drive.google.com/uc?export=view&id=1G1ckeuxuhd2qdTnFV5QmeN2FPvk90Bnh/view?usp=sharing)
+![Vue Goodreads Clone Images](https://drive.google.com/uc?export=view&id=1G1ckeuxuhd2qdTnFV5QmeN2FPvk90Bnh)
 
 # Project Roadmap
 
