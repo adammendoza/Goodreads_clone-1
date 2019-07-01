@@ -27,7 +27,6 @@
 			    <h1>
 			     My weekend <span style="color:#ffffff">is </span> all <span style="color:#ffffff">booked.</span>
 			     </h1>
-			    <h4><em>&mdash;Not sure who said it,</em><br><em>But I'm doing it.</em></h4>
 			  </div>
 			</div>
 		</div>
