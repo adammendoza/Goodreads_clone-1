@@ -1,5 +1,5 @@
 # Vue Goodreads Clone 
->Vue Goodreads Clone with API from Goodreads and Firebase backend. Deploy a Vue.js App with Firebase Hosting.
+>Vue Goodreads Clone with API from Goodreads and Firebase backend. Deploy a Vue.js App with Firebase Hosting. This app is written a while ago. Working on an alternative Wonk App project with a new approach.
 
 # Project Images
 
