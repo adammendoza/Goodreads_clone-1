@@ -18,8 +18,6 @@ const mutations = {
 const actions = {
 	filteredBooks: ({commit}, search) => {
 
-		console.log(search)
-
 		let books = [];
 
   	if(search !== null){
@@ -44,13 +42,6 @@ const getters = {
 	books: state => {
 		return state.books;
 	},
-	//commenting filtered books out, since now search works with API query parameter and not filtering the books data object, and changing "book in filteredBooks" to "book in books"
-
-	// filteredBooks: state => {
-	// 	return state.books.filter((book)=>{
-	// 		return book.title.toLowerCase().match(state.searchTerm) || book.ISBN.toLowerCase().match(state.searchTerm) || book.author.toLowerCase().match(state.searchTerm);
-	// 	});
-	// }
 };
 
 export default {

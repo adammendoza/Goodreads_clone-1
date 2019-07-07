@@ -1,6 +1,5 @@
 <template>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<!-- Remove anchor tag and manage through vue. -->
 		<router-link to="/">PRIMEREADS</router-link>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
@@ -28,7 +27,6 @@
 	  	</li>
 	  </ul>
 	</nav>
-	<!-- You need to handle dropdowns with javascript, and you could use Bootstrap js for that, but you want to handle all with vue. -->
 </template>
 
 <script>

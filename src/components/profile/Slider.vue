@@ -1,13 +1,4 @@
 <template>
-<!-- <div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-primary">
-        <input type="radio" name="options" id="On" />ON</label>
-    <label class="btn btn-primary">
-        <input type="radio" name="options" id="NA" />N/A</label>
-    <label class="btn btn-primary">
-        <input type="radio" name="options" id="Off" />OFF</label>
-</div> -->
-
 	<div class="wrapper ">
 	  <div class="toggle_radio">
 	    <input type="radio" class="toggle_option" id="first_toggle" value="first_toggle" name="toggle_option" v-model="currentView">
@@ -17,17 +8,12 @@
 	    <label for="second_toggle"><h3>Reading</h3></label>
 	    <label for="third_toggle"><h3>Want to Read</h3></label>
 	    <div class="toggle_option_slider">
-<!-- 	    <span>Picked: {{ picked }} </span>
- -->	    </div>
+	    </div>
 	  </div>
 
-  	
   	<div>
   		<component :is="currentView"></component>
   	</div>
-<!-- 	  <app-read v-show="picked === 'first_toggle'"></app-read>
-		<app-reading v-show="picked === 'second_toggle'"></app-reading>
-		<app-want-to-read v-show="picked === 'third_toggle'"></app-want-to-read> -->
 
 	</div>
 </template>
@@ -40,7 +26,6 @@
 	export default {
 		data(){
 			return {
-				// picked: null,
 				currentView: 'first_toggle'
 			};
 		},
@@ -54,30 +39,23 @@
 
 <style scoped>
 
-	@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
-
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
 div.row { text-align: center; }
 div.row > div.wrapper { margin: 0 auto; width: 1110px; }
-
 
 *{
   margin:0px;
   padding:0px;
 }
 
-/*html{
-  background-color: #497dd0;
-}*/
-
 div.wrapper {
   margin: 50px 0;
-/*  background-color: #497dd0;*/
 }
 
 .toggle_radio{
   position: relative;
-  background: #497dd0;   /*rgba(255,255,255,.1)*/
+  background: #497dd0;   
   margin: 4px auto;
   margin-top: 20px;
   margin-bottom: 40px;
@@ -95,7 +73,6 @@ div.wrapper {
 }
 .toggle_radio input[type=radio]{
   display: none;
-  /*position: fixed;*/
 }
 .toggle_radio label{
   font: 90%/1.618 "Source Sans Pro";
@@ -110,14 +87,9 @@ div.wrapper {
   border-radius: 50px;
   cursor: pointer;
   z-index: 1;
-  /*background: rgba(0,0,0,.1);*/
   text-align: center;
-  /*margin: 0 2px;*/
-  /*background: blue;*/ /*make it blue*/
 }
 .toggle_option_slider{
-  /*display: none;*/
-  /*background: red;*/
   width: 150px;
   height: 30px;
   position: absolute;

@@ -1,8 +1,5 @@
 <template>
 	<div class="listContents">
-<!--     <p>reading {{ mylist.reading }} </p>
-    <p>haveRead {{ mylist.haveRead }} </p>
-    <p>wantToRead {{ mylist.wantToRead }} </p> -->
     <div class="listContentBooks">
     	<app-card v-for="book in mylist.wantToRead" :book="book" :data="book" :key="book.id" ></app-card>
     </div>
@@ -29,10 +26,6 @@
 </script>
 
 <style scoped>
-/*
-div.listContents { text-align: center; }
-div.listContents > div.listContentBooks { margin: 0 auto; width: 1110px; }*/
-
 	div.listContentBooks {
   width: 100%;
   height: 100%;
@@ -44,8 +37,7 @@ div.listContents > div.listContentBooks { margin: 0 auto; width: 1110px; }*/
 	form.form-inline.my-2.my-lg-0 {
 	  padding-top: 30px;
 	  padding-bottom: 30px;
-/*	  padding-left: 30px;
-*/	}
+	}
 	input.form-control.mr-sm-2 {
 		width: 90% !important;
 	} 

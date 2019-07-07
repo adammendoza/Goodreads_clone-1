@@ -15,20 +15,16 @@ const mutations = {
     for (var list in state.mylist) { 
     			// Use filter method to remove the book from all the lists prior to adding it.
       state.mylist[list] = state.mylist[list].filter(item => {
-				// return item !== book; // Shouldn't compare 2 objects
 				//At this time, it reference to the same object, when you save and load, it create new object with same props, but allocated at different memory buffer. So it understand 2 objects are different; This is why previously it wouldn't add the book 2ce to the same list, but upon loading, since it creates a new object it does. Unless you use a unique prop. 
 				return item.id !== book.id;
       });
       console.log(state.mylist[list]);
     }
-		
 		//Add the book to selected list.
-		if (selection) { // Don't forget to check when user choose the first selection, currently has no value and display text: 'Choose...'
+		if (selection) { 
 			state.mylist[selection].push(book);
 		}
-    
-    console.log(state.mylist[selection])
-	}, 
+ 	}, 
 	'REMOVE_FROM_LIST'(state, book){
     for (var list in state.mylist) { 
       state.mylist[list] = state.mylist[list].filter(item => {
@@ -50,13 +46,10 @@ const actions = {
 	},
 	loadData: ({commit}) => {
 		axios.get('https://goodreadsclone-c0542.firebaseio.com/data.json')
-			// .then(response => console.log(response.data.haveRead))
 			.then(response => {
 				let mylist = myInitList;
 
-				if (response.data !== null) { // Should check null first
-					// console.log(response.data.haveRead)
-					// console.log(response.data.wantToRead)
+				if (response.data !== null) { 
 					const haveRead = response.data.haveRead || []; // If we save an empty array, Firebase won't save as an empty array but nothing, so we should set an empty array if we get undefined from Firebase.
 					const reading = response.data.reading || [];
 					const wantToRead = response.data.wantToRead || [];

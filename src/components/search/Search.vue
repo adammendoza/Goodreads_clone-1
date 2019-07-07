@@ -2,21 +2,7 @@
 	<div>
 		<form class=" form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Enter book title, author, or ISBN" aria-label="Search" @input="storeSearch">
-
-<!-- Alternatively in Search.vue, remove @input from input and add ref="searchTerm" to it (get value by this ref); add @submit.prevent="storeSearch" to form; this way only 1 API call will be made when I hit enter after typed search term I need.
-
-@submit.prevent catches the event submit of form and prevents default action when form is submitted
-Because we are using Vue, a kind of SPA, form submit will make full page reload, current state will be reset to initials state. 
-
-It also depends on your code, if you don't use form, just an input, you also do the same things with @keypress.enter. -->
-
-<!--       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
- -->    </form>
-<!--     <p>reading {{ mylist.reading }} </p>
-    <p>haveRead {{ mylist.haveRead }} </p>
-    <p>wantToRead {{ mylist.wantToRead }} </p> -->
-<!-- 
-	commenting filtered books out, since now search works with API query parameter and not filtering the books data object, and changing "book in filteredBooks" to "book in books" -->
+		</form>
 		<div class="searchLayout">
 			<app-card v-for="book in books" :book="book" :data="book" :key="book.id" ></app-card>
 		</div>
@@ -27,12 +13,6 @@ It also depends on your code, if you don't use form, just an input, you also do 
 	import Card from '../card/Card.vue'
 
 	export default {
-		// data(){
-		// 	return{
-		// 		//to use in template above - if you want a javascript variable to be used in template, u must add that in. Same with methods, if you want to call a function from the template, add that in. 
-		// 		// search: ''
-		// 	}
-		// },
 		components: {
 			appCard: Card
 		},
@@ -47,12 +27,6 @@ It also depends on your code, if you don't use form, just an input, you also do 
 			filteredBooks() {
 				return this.$store.getters.filteredBooks
 			}
-			//before Vuex application
-			// filteredBooks: function(){
-			// 	return this.books.filter((book)=>{
-			// 		return book.title.toLowerCase().match(this.search) || book.ISBN.toLowerCase().match(this.search) || book.author.toLowerCase().match(this.search);
-			// 	});
-			// }
 		},
 
 		methods: {
@@ -60,14 +34,6 @@ It also depends on your code, if you don't use form, just an input, you also do 
 			storeSearch (event) {
 				this.$store.dispatch('filteredBooks', { searchTerm: event.target.value })
 			}
-			//incorrect vuex application
-	 //    filteredBooks() {
-	 //     	const search = {
-		// 			searchTerm: this.search
-		// 		}
-		// 		console.log(search.searchTerm);
-	 //     	this.$store.dispatch('filteredBooks', search);
-		// }
 	}
 };
 

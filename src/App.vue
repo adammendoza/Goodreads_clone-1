@@ -3,9 +3,7 @@
     <div class="logo">PRIMEREADS</div>
     <app-header></app-header>
     <div>
-      <!-- <div class="col-xs-12"> -->
-        <router-view></router-view>
-      <!-- </div> -->
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -17,10 +15,6 @@
       appHeader: Header
     },
     created() {
-
-      //comment initBooks in store and comment dispatch action in App.vue. I don't have a boooks array to initate when I implement search API.
-
-      // this.$store.dispatch('initBooks');
       this.$store.dispatch('initList');
     }
   }

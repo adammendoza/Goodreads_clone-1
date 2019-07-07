@@ -1,16 +1,60 @@
 <!DOCTYPE html>
-<!-- saved from url=(0022)http://localhost:8080/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <title>goodreads_clone</title>
-    <!-- Bootstrap CDN -->
-    <!-- If you’re using Bootstrap's compiled JavaScript, don’t forget to include CDN versions of jQuery and Popper.js before including Bootstrap. -->
-    <script src="./goodreads_clone_files/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="./goodreads_clone_files/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./goodreads_clone_files/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-		<script src="./goodreads_clone_files/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <link href="./goodreads_clone_files/css" rel="stylesheet">
-  <style type="text/css">
+  <html lang="en">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+      <title>goodreads_clone</title>
+      <script src="./goodreads_clone_files/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="./goodreads_clone_files/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="./goodreads_clone_files/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  		<script src="./goodreads_clone_files/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+      <link href="./goodreads_clone_files/css" rel="stylesheet">
+      <script type="text/javascript" charset="utf-8" src="./goodreads_clone_files/0.84aacd238cb0f9edf5e6.hot-update.js"></script>
+      <script type="text/javascript" charset="utf-8" src="./goodreads_clone_files/0.8c7b2d8ff4fec7168b44.hot-update.js"></script>
+    </head>
+    <body>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a href="http://localhost:8080/" class="navbar-brand router-link-exact-active router-link-active">Goodreads</a> <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+            <span class="navbar-toggler-icon"></span>
+          </button> 
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-link">
+                <a href="http://localhost:8080/search">Search</a>
+              </li> 
+              <li class="nav-link">
+                <a href="http://localhost:8080/profile">Profile</a>
+              </li>
+            </ul>
+          </div> 
+          <ul class="nav navbar-nav-navbar-right">
+            <li class="dropdown">
+              <a href="http://localhost:8080/#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">Save &amp; Load 
+                <span class="caret"></span>
+              </a> <ul class="dropdown-menu">
+                <li>
+                  <a >Save Data</a>
+                </li> 
+                <li>
+                  <a href="http://localhost:8080/#">Load Data</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav> 
+        <div class="row"><div>
+          <br> 
+          <h1>Deciding what to read next?</h1> 
+          <br> 
+          <h3>Search our catalogue and add books to your bookshelf as have read, reading, or want to read.</h3> 
+          <h3>Save your books and load them.</h3>
+        </div>
+      </div>
+    </div>
+    <script src="./goodreads_clone_files/build.js"></script>
+  </body>
+</html>
+
+<style type="text/css">
 body {
   background-image: url(/dist/bookshelves.jpg?710cf1a8fd183f5e154882cf6526bfd2);
 }
@@ -21,32 +65,18 @@ p {
   background-image: url(/dist/coarse-paper.jpg?02218743bd940ad9dfa80dee5e7ea586);
   height: 100%;
 }
-
-/*# sourceURL=/Users/elizakhachatryan/Workspace/goodreads_clone/src/src/App.vue */
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9lbGl6YWtoYWNoYXRyeWFuL1dvcmtzcGFjZS9nb29kcmVhZHNfY2xvbmUvc3JjL3NyYy9BcHAudnVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUE2QkE7RUFDQSxnREFBQTtDQUNBO0FBQ0E7RUFDQSxnQkFBQTtDQUNBO0FBQ0E7RUFDQSxnREFBQTtFQUNBLGFBQUE7Q0FDQSIsImZpbGUiOiJBcHAudnVlIiwic291cmNlc0NvbnRlbnQiOlsiPHRlbXBsYXRlPlxuICA8ZGl2IGNsYXNzPVwiY29udGFpbmVyXCI+XG4gICAgPGFwcC1oZWFkZXI+PC9hcHAtaGVhZGVyPlxuICAgIDxkaXYgY2xhc3M9XCJyb3dcIj5cbiAgICAgIDwhLS0gPGRpdiBjbGFzcz1cImNvbC14cy0xMlwiPiAtLT5cbiAgICAgICAgPHJvdXRlci12aWV3Pjwvcm91dGVyLXZpZXc+XG4gICAgICA8IS0tIDwvZGl2PiAtLT5cbiAgICA8L2Rpdj5cbiAgPC9kaXY+XG48L3RlbXBsYXRlPlxuXG48c2NyaXB0PlxuICBpbXBvcnQgSGVhZGVyIGZyb20gJy4vY29tcG9uZW50cy9IZWFkZXIudnVlJ1xuICBleHBvcnQgZGVmYXVsdCB7XG4gICAgY29tcG9uZW50czoge1xuICAgICAgYXBwSGVhZGVyOiBIZWFkZXJcbiAgICB9LFxuICAgIGNyZWF0ZWQoKSB7XG5cbiAgICAgIC8vY29tbWVudCBpbml0Qm9va3MgaW4gc3RvcmUgYW5kIGNvbW1lbnQgZGlzcGF0Y2ggYWN0aW9uIGluIEFwcC52dWUuIEkgZG9uJ3QgaGF2ZSBhIGJvb29rcyBhcnJheSB0byBpbml0YXRlIHdoZW4gSSBpbXBsZW1lbnQgc2VhcmNoIEFQSS5cblxuICAgICAgLy8gdGhpcy4kc3RvcmUuZGlzcGF0Y2goJ2luaXRCb29rcycpO1xuICAgICAgdGhpcy4kc3RvcmUuZGlzcGF0Y2goJ2luaXRMaXN0Jyk7XG4gICAgfVxuICB9XG48L3NjcmlwdD5cblxuPHN0eWxlPlxuXG5ib2R5IHtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiYXNzZXRzL2Jvb2tzaGVsdmVzLmpwZ1wiKTtcbn1cbnAge1xuICBmb250LXNpemU6IC44ZW07XG59XG4uY29udGFpbmVyIHtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiYXNzZXRzL2NvYXJzZS1wYXBlci5qcGdcIik7XG4gIGhlaWdodDogMTAwJTtcbn1cbjwvc3R5bGU+XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><style type="text/css">
 nav.navbar.navbar-expand-lg.navbar-light.bg-light{
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-
-/*# sourceURL=/Users/elizakhachatryan/Workspace/goodreads_clone/src/components/src/components/Header.vue */
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9lbGl6YWtoYWNoYXRyeWFuL1dvcmtzcGFjZS9nb29kcmVhZHNfY2xvbmUvc3JjL2NvbXBvbmVudHMvc3JjL2NvbXBvbmVudHMvSGVhZGVyLnZ1ZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBK0RBO0NBQ0Esb0JBQUE7Q0FDQSIsImZpbGUiOiJIZWFkZXIudnVlIiwic291cmNlc0NvbnRlbnQiOlsiPHRlbXBsYXRlPlxuXHQ8bmF2IGNsYXNzPVwibmF2YmFyIG5hdmJhci1leHBhbmQtbGcgbmF2YmFyLWxpZ2h0IGJnLWxpZ2h0XCI+XG5cdFx0XHQ8IS0tIFJlbW92ZSBhbmNob3IgdGFnIGFuZCBtYW5hZ2UgdGhyb3VnaCB2dWUuIC0tPlxuXHRcdDxyb3V0ZXItbGluayB0bz1cIi9cIiBjbGFzcz1cIm5hdmJhci1icmFuZFwiPkdvb2RyZWFkczwvcm91dGVyLWxpbms+XG5cdCAgPGJ1dHRvbiBjbGFzcz1cIm5hdmJhci10b2dnbGVyXCIgdHlwZT1cImJ1dHRvblwiIGRhdGEtdG9nZ2xlPVwiY29sbGFwc2VcIiBkYXRhLXRhcmdldD1cIiNuYXZiYXJTdXBwb3J0ZWRDb250ZW50XCIgYXJpYS1jb250cm9scz1cIm5hdmJhclN1cHBvcnRlZENvbnRlbnRcIiBhcmlhLWV4cGFuZGVkPVwiZmFsc2VcIiBhcmlhLWxhYmVsPVwiVG9nZ2xlIG5hdmlnYXRpb25cIj5cblx0ICAgIDxzcGFuIGNsYXNzPVwibmF2YmFyLXRvZ2dsZXItaWNvblwiPjwvc3Bhbj5cblx0ICA8L2J1dHRvbj5cblxuXHQgIDxkaXYgY2xhc3M9XCJjb2xsYXBzZSBuYXZiYXItY29sbGFwc2VcIiBpZD1cIm5hdmJhclN1cHBvcnRlZENvbnRlbnRcIj5cblx0ICAgIDx1bCBjbGFzcz1cIm5hdmJhci1uYXYgbXItYXV0b1wiPlxuXHQgICAgXHQ8cm91dGVyLWxpbmsgdG89XCIvc2VhcmNoXCIgYWN0aXZlQ2xhc3M9XCJhY3RpdmVcIiB0YWc9XCJsaVwiIGNsYXNzPVwibmF2LWxpbmtcIj48YT5TZWFyY2g8L2E+PC9yb3V0ZXItbGluaz5cblx0ICAgIFx0PHJvdXRlci1saW5rIHRvPVwiL3Byb2ZpbGVcIiBhY3RpdmVDbGFzcz1cImFjdGl2ZVwiIHRhZz1cImxpXCIgY2xhc3M9XCJuYXYtbGlua1wiPjxhPlByb2ZpbGU8L2E+PC9yb3V0ZXItbGluaz5cblx0ICAgIDwvdWw+XG5cdCAgPC9kaXY+XG5cdCAgPHVsIGNsYXNzPVwibmF2IG5hdmJhci1uYXYtbmF2YmFyLXJpZ2h0XCI+XG5cdCAgXHQ8bGkgY2xhc3M9XCJkcm9wZG93blwiPlxuXHQgIFx0XHQ8YVxuXHQgIFx0XHRcdGhyZWY9JyMnXG5cdCAgXHRcdFx0Y2xhc3M9XCJkcm9wZG93bi10b2dnbGVcIlxuXHQgIFx0XHRcdGRhdGEtdG9nZ2xlPVwiZHJvcGRvd25cIlxuXHQgIFx0XHRcdHJvbGU9XCJidXR0b25cIlxuXHQgIFx0XHRcdGFyaWEtaGFzcG9wdXA9XCJ0cnVlXCJcblx0ICBcdFx0XHRhcmlhLWV4cGFuZGVkPVwiZmFsc2VcIj5TYXZlICYgTG9hZCA8c3BhbiBjbGFzcz1cImNhcmV0XCI+PC9zcGFuPjwvYT5cblx0ICBcdFx0PHVsIGNsYXNzPVwiZHJvcGRvd24tbWVudVwiPlxuXHQgIFx0XHRcdDxsaT48YSBocmVmPVwiI1wiIEBjbGljaz1cInNhdmVEYXRhXCI+U2F2ZSBEYXRhPC9hPjwvbGk+XG5cdCAgXHRcdFx0PGxpPjxhIGhyZWY9XCIjXCIgQGNsaWNrPVwibG9hZERhdGFcIj5Mb2FkIERhdGE8L2E+PC9saT5cblx0ICBcdFx0PC91bD5cblx0ICBcdDwvbGk+XG5cdCAgPC91bD5cblx0PC9uYXY+XG5cdDwhLS0gWW91IG5lZWQgdG8gaGFuZGxlIGRyb3Bkb3ducyB3aXRoIGphdmFzY3JpcHQsIGFuZCB5b3UgY291bGQgdXNlIEJvb3RzdHJhcCBqcyBmb3IgdGhhdCwgYnV0IHlvdSB3YW50IHRvIGhhbmRsZSBhbGwgd2l0aCB2dWUuIC0tPlxuPC90ZW1wbGF0ZT5cblxuPHNjcmlwdD5cblx0aW1wb3J0IGF4aW9zIGZyb20gJ2F4aW9zJztcblxuXHRleHBvcnQgZGVmYXVsdCB7XG5cblx0XHRtZXRob2RzOiB7XG5cdFx0XG5cdFx0XHRcdGZldGNoRGF0YSgpe1xuXHRcdFx0XHRcdHRoaXMuJHN0b3JlLmRpc3BhdGNoKCdsb2FkRGF0YScpXG5cdFx0XHRcdH0sXG5cblx0XHRcdFx0c2F2ZURhdGEoKXtcblx0XHRcdFx0XHRjb25zdCBkYXRhID0ge1xuXHRcdFx0XHRcdFx0aGF2ZVJlYWQ6IHRoaXMuJHN0b3JlLmdldHRlcnMubXlsaXN0LmhhdmVSZWFkLFxuXHRcdFx0XHRcdFx0cmVhZGluZzogdGhpcy4kc3RvcmUuZ2V0dGVycy5teWxpc3QucmVhZGluZyxcblx0XHRcdFx0XHRcdHdhbnRUb1JlYWQ6IHRoaXMuJHN0b3JlLmdldHRlcnMubXlsaXN0LndhbnRUb1JlYWRcblx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0Y29uc29sZS5sb2coZGF0YS5oYXZlUmVhZCwgZGF0YS5yZWFkaW5nLCBkYXRhLndhbnRUb1JlYWQpXG5cdFx0XHRcdFx0YXhpb3MucHV0KCdodHRwczovL2dvb2RyZWFkc2Nsb25lLWMwNTQyLmZpcmViYXNlaW8uY29tL2RhdGEuanNvbicsIGRhdGEpXG5cdFx0XHRcdFx0XHQudGhlbihyZXMgPT4gY29uc29sZS5sb2cocmVzKSlcblx0XHRcdFx0XHRcdC5jYXRjaChlcnJvciA9PiBjb25zb2xlLmxvZyhlcnJvcikpXG5cdFx0XHRcdH0sIFxuXHRcdFx0XHRsb2FkRGF0YSgpe1xuXHRcdFx0XHRcdHRoaXMuZmV0Y2hEYXRhKCk7XG5cdFx0XHRcdH1cblx0XHR9XG5cdH1cbjwvc2NyaXB0PlxuXG48c3R5bGU+XG5cdG5hdi5uYXZiYXIubmF2YmFyLWV4cGFuZC1sZy5uYXZiYXItbGlnaHQuYmctbGlnaHR7XG5cdFx0bWFyZ2luLWJvdHRvbTogMjBweDtcblx0fVxuPC9zdHlsZT4iXSwic291cmNlUm9vdCI6IiJ9 */</style><style type="text/css">
-div	{
-	margin-left: 20px;
+div {
+  margin-left: 20px;
 }
 h1 {
-	font-size: 1.5em;
-	font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  font-family: 'Lato', sans-serif;
 }
 h3 {
-	font-size: 1em;
-	font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  font-family: 'Lato', sans-serif;
 }
-
-/*# sourceURL=/Users/elizakhachatryan/Workspace/goodreads_clone/src/components/src/components/Home.vue */
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9lbGl6YWtoYWNoYXRyeWFuL1dvcmtzcGFjZS9nb29kcmVhZHNfY2xvbmUvc3JjL2NvbXBvbmVudHMvc3JjL2NvbXBvbmVudHMvSG9tZS52dWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQVdBO0NBQ0Esa0JBQUE7Q0FDQTtBQUNBO0NBQ0EsaUJBQUE7Q0FDQSxnQ0FBQTtDQUNBO0FBQ0E7Q0FDQSxlQUFBO0NBQ0EsZ0NBQUE7Q0FDQSIsImZpbGUiOiJIb21lLnZ1ZSIsInNvdXJjZXNDb250ZW50IjpbIjx0ZW1wbGF0ZT5cblx0PGRpdj5cblx0XHQ8YnI+XG5cdFx0PGgxPkRlY2lkaW5nIHdoYXQgdG8gcmVhZCBuZXh0PzwvaDE+XG5cdFx0PGJyPlxuXHRcdDxoMz5TZWFyY2ggb3VyIGNhdGFsb2d1ZSBhbmQgYWRkIGJvb2tzIHRvIHlvdXIgYm9va3NoZWxmIGFzIGhhdmUgcmVhZCwgcmVhZGluZywgb3Igd2FudCB0byByZWFkLjwvaDM+XG5cdFx0PGgzPlNhdmUgeW91ciBib29rcyBhbmQgbG9hZCB0aGVtLjwvaDM+XG5cdDwvZGl2PlxuPC90ZW1wbGF0ZT5cblxuPHN0eWxlPlxuXHRkaXZcdHtcblx0XHRtYXJnaW4tbGVmdDogMjBweDtcblx0fVxuXHRoMSB7XG5cdFx0Zm9udC1zaXplOiAxLjVlbTtcblx0XHRmb250LWZhbWlseTogJ0xhdG8nLCBzYW5zLXNlcmlmO1xuXHR9XG5cdGgzIHtcblx0XHRmb250LXNpemU6IDFlbTtcblx0XHRmb250LWZhbWlseTogJ0xhdG8nLCBzYW5zLXNlcmlmO1xuXHR9XG48L3N0eWxlPiJdLCJzb3VyY2VSb290IjoiIn0= */</style><script type="text/javascript" charset="utf-8" src="./goodreads_clone_files/0.84aacd238cb0f9edf5e6.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./goodreads_clone_files/0.8c7b2d8ff4fec7168b44.hot-update.js"></script></head>
-  <body>
-    <div class="container"><nav class="navbar navbar-expand-lg navbar-light bg-light"><a href="http://localhost:8080/" class="navbar-brand router-link-exact-active router-link-active">Goodreads</a> <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button> <div id="navbarSupportedContent" class="collapse navbar-collapse"><ul class="navbar-nav mr-auto"><li class="nav-link"><a href="http://localhost:8080/search">Search</a></li> <li class="nav-link"><a href="http://localhost:8080/profile">Profile</a></li></ul></div> <ul class="nav navbar-nav-navbar-right"><li class="dropdown"><a href="http://localhost:8080/#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">Save &amp; Load <span class="caret"></span></a> <ul class="dropdown-menu"><li><a href="http://localhost:8080/#">Save Data</a></li> <li><a href="http://localhost:8080/#">Load Data</a></li></ul></li></ul></nav> <div class="row"><div><br> <h1>Deciding what to read next?</h1> <br> <h3>Search our catalogue and add books to your bookshelf as have read, reading, or want to read.</h3> <h3>Save your books and load them.</h3></div></div></div>
-    <script src="./goodreads_clone_files/build.js"></script>
-  
-
-</body></html>
+</style>
